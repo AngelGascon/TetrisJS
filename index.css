@@ -18,9 +18,11 @@ header h1 {
 }
 
 footer {
-    margin-top: 35px;
-    margin-bottom: 30px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     text-align: center;
+    padding-bottom: 2em;
 }
 
 .grid {
@@ -29,6 +31,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     
+    margin-top: 25px;
     background-color: #F2E8CF;
     z-index: -1;
 }
@@ -38,6 +41,29 @@ footer {
     width: 20px;
 }
 
+.mini-grid {
+    margin-top: 25px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #F2E8CF;
+    margin-left: 20px;
+    z-index: -1;
+}
+
+.mini-grid div {
+    height: 20px;
+    width: 20px;
+}
+
 .tetromino {
     background-color: black;
+}
+
+.controls-box {
+    margin-top: 30px;;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
