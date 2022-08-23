@@ -66,14 +66,26 @@ document.addEventListener('DOMContentLoaded', () => {
     function draw() {
         current.forEach(index => {
             squares[currentPosition + index].classList.add('tetromino')
+            squares[currentPosition + index].style.backgroundColor = colors[random]
         })
     }
 
     function undraw() {
         current.forEach(index =>{
             squares[currentPosition + index].classList.remove('tetromino')
+            squares[currentPosition + index].style.backgroundColor = '#F2E8CF'
         })
     }
+    
+    //Buttons Controllers
+    const leftBtn = document.querySelector('#left-button')
+    const rotateBtn = document.querySelector('#rotate-button')
+    const downBtn = document.querySelector('#down-button')
+    const rightBtn = document.querySelector('#right-button')
+    leftBtn.addEventListener("click", () => { moveLeft() });
+    rotateBtn.addEventListener("click", () => { rotate() });
+    downBtn.addEventListener("click", () => { moveDown() });
+    rightBtn.addEventListener("click", () => { moveRight() });
 
     //Controller using keyboard
     function control(e) {
@@ -158,9 +170,11 @@ document.addEventListener('DOMContentLoaded', () => {
         //remove any trace of a tetromino form the entire grid
         displaySquares.forEach(squares => {
             squares.classList.remove('tetromino')
+            squares.style.backgroundColor = '#F2E8CF'
         })
         upNextTetrominoes[nextRandom].forEach( index => {
             displaySquares[displayIndex + index].classList.add('tetromino')
+            displaySquares[displayIndex + index].style.backgroundColor = colors[nextRandom]
         })
     }
 
@@ -185,6 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 row.forEach(index => {
                     squares[index].classList.remove('taken')
                     squares[index].classList.remove('tetromino')
+                    squares[index].style.backgroundColor = ''
                 })
                 const squaresRemoved = squares.splice(i, width)
                 squares = squaresRemoved.concat(squares)
@@ -200,13 +215,3 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 })
-
-/*
-    To add:
-
-    - Next piece <p> //
-    - graphics
-    - holding key moves
-    - buttons for mobile players
-    - maybe mediaQueries
-*/

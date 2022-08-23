@@ -1,10 +1,10 @@
 body,h1,h2,h3,h4,h5,h6,p {font-family: "Lato", sans-serif; color: #F2E8CF;}
 
 body {
-  margin: 0;
-  padding: 0;
-  font-size: 1rem;
-  background-color: #162719;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    background-color: #162719;
 }
 
 header {
@@ -22,7 +22,11 @@ footer {
     bottom: 0;
     width: 100%;
     text-align: center;
-    padding-bottom: 2em;
+    margin-bottom: 25px;
+}
+
+button:hover {
+    background-color: rgb(139, 139, 139);
 }
 
 .grid {
@@ -62,8 +66,15 @@ footer {
 }
 
 .controls-box {
-    margin-top: 30px;;
+    margin-top: 30px;
+    margin-bottom: 30px;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: center; 
+}
+
+@media (max-height: 900px) {
+    footer {
+        position: relative;
+    }
 }

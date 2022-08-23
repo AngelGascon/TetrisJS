@@ -14,7 +14,7 @@
         </header>
         <h3 style="padding-left: 50px;">Score: <span id="score">0</span></h3>
         <button onclick="click" id="start-button"  style="margin-left: 50px; border: none; border-radius: 9999px; font-size: 18px; background-color: #F2E8CF; color: #162719; font-weight: bold;"> Start/Pause</button>
-        <div style="width: 100%; display: flex; justify-content: center;">
+        <div style="width: 100%; display: flex; justify-content: center; padding-top: 30px;">
             <h4 style="position: absolute; margin-top: 0; margin-left:220px; font-size:15px" >Next piece:</h4>
             <div class="grid">
                 <div></div>
@@ -245,16 +245,14 @@
                 <div></div>
                 <div></div>
                 <div></div>
-                <div"></div>
+                <div></div>
             </div>
         </div>
         <div class="controls-box">
-            <button><--</button>
-            <div style="display: inline; text-align: center;">
-                <button>@</button>
-                <button>D</button> 
-            </div>
-            <button>--></button>
+            <button onclick="click" id="left-button" style="background-color: #F2E8CF; border: none; border-radius: 10px; margin: 10px;"> <img src="ControllerTetrisJS/left.png" style="max-width: 25px; max-height: 25px;"></img></button>
+            <button onclick="click" id="rotate-button" style="background-color: #F2E8CF; border: none; border-radius: 10px; margin: 10px;"> <img src="ControllerTetrisJS/rotate.png" style="max-width: 25px; max-height: 25px;"></img></button>
+            <button onclick="click" id="down-button" style="background-color: #F2E8CF; border: none; border-radius: 10px; margin: 10px;"> <img src="ControllerTetrisJS/down.png" style="max-width: 25px; max-height: 25px;"></img></button>
+            <button onclick="click" id="right-button" style="background-color: #F2E8CF; border: none; border-radius: 10px; margin: 10px;"> <img src="ControllerTetrisJS/right.png" style="max-width: 25px; max-height: 25px;"></img></button>
         </div>
         <!-- Social media links and typical stuff you expect to find a the bottom of a personal webpage -->
         <footer>
